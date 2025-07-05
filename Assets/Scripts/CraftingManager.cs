@@ -51,12 +51,8 @@ public class CraftManager : MonoBehaviour
             // --- Patterns alternatifs en dur pour les crafts spéciaux ---
             else if (recipe.resultItem == ItemType.Stick)
             {
-                // [OakPlanks, None, OakPlanks, None]
-                bool altPattern1 = itemsInZones[0] == ItemType.OakPlanks && itemsInZones[2] == ItemType.OakPlanks
-                                   && itemsInZones[1] == ItemType.None && itemsInZones[3] == ItemType.None;
-                // [None, OakPlanks, None, OakPlanks]
-                bool altPattern2 = itemsInZones[1] == ItemType.OakPlanks && itemsInZones[3] == ItemType.OakPlanks
-                                   && itemsInZones[0] == ItemType.None && itemsInZones[2] == ItemType.None;
+                bool altPattern1 = itemsInZones[0] == ItemType.OakPlanks && itemsInZones[2] == ItemType.OakPlanks && itemsInZones[1] == ItemType.None && itemsInZones[3] == ItemType.None;
+                bool altPattern2 = itemsInZones[1] == ItemType.OakPlanks && itemsInZones[3] == ItemType.OakPlanks && itemsInZones[0] == ItemType.None && itemsInZones[2] == ItemType.None;
 
                 if (altPattern1 || altPattern2)
                 {
