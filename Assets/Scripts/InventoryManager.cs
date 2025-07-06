@@ -125,11 +125,12 @@ public class InventoryManager : MonoBehaviour
             UpdateOakLog();
             UpdateOakPlanks();
 
+            InventoryOakPlanks.SetActive(true);
+            InventoryOakPlanks.transform.SetAsFirstSibling(); // Affiche en haut
+            
             if (!hasUnlockedOakPlanks)
             {
                 hasUnlockedOakPlanks = true;
-                InventoryOakPlanks.SetActive(true);
-                InventoryOakPlanks.transform.SetAsFirstSibling(); // Affiche en haut
             }
 
             ShowMessage("Tu as crafté 4 planche de Oak Planks", Color.green);
@@ -150,11 +151,12 @@ public class InventoryManager : MonoBehaviour
             UpdateOakPlanks();
             UpdateStick();
 
+            InventoryStick.SetActive(true);
+            InventoryStick.transform.SetAsFirstSibling(); // Affiche en haut
+
             if (!hasUnlockedStick)
             {
                 hasUnlockedStick = true;
-                InventoryStick.SetActive(true);
-                InventoryStick.transform.SetAsFirstSibling(); // Affiche en haut
             }
 
             ShowMessage("Tu as crafté 4 stick", Color.green);
